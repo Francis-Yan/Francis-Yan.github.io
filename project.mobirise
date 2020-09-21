@@ -1,0 +1,852 @@
+{
+  "settings": {
+    "name": "My Site",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#6592e6",
+        "secondaryColor": "#ff6666",
+        "successColor": "#353535",
+        "infoColor": "#47b5ed",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "IBM Plex Sans",
+        "display1Font": "Jost",
+        "display1Size": 4.6,
+        "display2Font": "Jost",
+        "display2Size": 3,
+        "display5Font": "Jost",
+        "display5Size": 2.2,
+        "display7Font": "Jost",
+        "display7Size": 1.2,
+        "display4Font": "Jost",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.0.2",
+    "siteFonts": [
+      {
+        "css": "'IBM Plex Sans', sans-serif",
+        "name": "IBM Plex Sans",
+        "url": "https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i"
+      },
+      {
+        "css": "'Jost', sans-serif",
+        "name": "Jost",
+        "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 35,
+    "versionPublish": "5.1.4",
+    "imageResize": true,
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"5\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value selected>Left</option>\n            <option value=\"justify-content-center\">Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/-1620x1080.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#fafafa\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#fafafa\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Francis Yan</h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubitle\">MA, Nanjing University.</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Nice to Meet You:)</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\"><a class=\"btn btn-success\" href=\"index.html#slider2-s\" data-app-placeholder=\"Type Text\">Let's Start</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "saVg1A9qBi",
+          "_anchor": "header1-n",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-overlay": {
+              "z-index": "1"
+            },
+            "@media (min-width: 992px)": {
+              ".carousel": {
+                "min-height": "(@carouselHeight * 100px)",
+                "img": {
+                  "max-height": "(@carouselHeight * 100px)",
+                  "object-fit": "contain"
+                }
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".carousel": {
+                "min-height": "(@carouselHeight * 65px)",
+                "img": {
+                  "max-height": "(@carouselHeight * 65px)",
+                  "object-fit": "contain"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".carousel": {
+                "min-height": "(@carouselHeight * 55px)",
+                "img": {
+                  "max-height": "(@carouselHeight * 55px)",
+                  "object-fit": "contain"
+                }
+              },
+              ".container .carousel-control": {
+                "margin-bottom": "0"
+              },
+              ".content-slider-wrap": {
+                "width": "100% !important"
+              }
+            },
+            ".carousel, .carousel-inner": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".item-wrapper": {
+              "width": "100%"
+            },
+            ".carousel-caption": {
+              "bottom": "40px"
+            },
+            ".carousel-control:hover": {
+              "background": "#1b1b1b",
+              "color": "#fff",
+              "opacity": "1"
+            },
+            ".mobi-mbri-arrow-next": {
+              "margin-left": "5px"
+            },
+            ".mobi-mbri-arrow-prev": {
+              "margin-right": "5px"
+            },
+            ".container .carousel-indicators": {
+              "margin-bottom": "3px"
+            },
+            ".carousel-control": {
+              "top": "50%",
+              "width": "60px",
+              "height": "60px",
+              "margin-top": "-1.5rem",
+              "font-size": "22px",
+              "background-color": "rgba(0, 0, 0, 0.5)",
+              "border": "2px solid #fff",
+              "border-radius": "50%",
+              "transition": "all 0.3s",
+              "&.carousel-control-prev": {
+                "left": "0",
+                "margin-left": "2.5rem"
+              },
+              "&.carousel-control-next": {
+                "right": "0",
+                "margin-right": "2.5rem"
+              },
+              "@media (max-width: 767px)": {
+                "top": "auto",
+                "bottom": "1rem"
+              }
+            },
+            ".carousel-indicators": {
+              "position": "absolute",
+              "bottom": "0",
+              "margin-bottom": "1.5rem !important",
+              "li": {
+                "max-width": "15px",
+                "height": "15px",
+                "width": "15px",
+                "max-height": "15px",
+                "margin": "3px",
+                "background-color": "rgba(0, 0, 0, 0.5)",
+                "border": "2px solid #fff",
+                "border-radius": "50%",
+                "opacity": "0.5",
+                "transition": "all 0.3s",
+                "&.active, &:hover": {
+                  "opacity": "0.9"
+                },
+                "&::after, &::before": {
+                  "content": "none"
+                }
+              },
+              "&.ie-fix": {
+                "left": "50%",
+                "display": "block",
+                "width": "60%",
+                "margin-left": "-30%",
+                "text-align": "center"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            }
+          },
+          "_name": "slider2",
+          "_customHTML": "<section class=\"slider2\" group=\"Sliders & Galleries\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Height\" name=\"carouselHeight\" min=\"4\" max=\"12\" step=\"1\" value=\"8\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"10\" condition=\"!fullWidth\">\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Fade Effect\" name=\"fade\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"3\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <header>Slide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showCaption\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlaySlide\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlaySlideColor\" value=\"#232323\" condition=\"overlaySlide\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlaySlideOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlaySlide\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#fafafa\" selected>\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\" mbr-class=\"{'col-lg-12':fullWidth}\">\n                <div id=\"{{sliderId}}\" class=\"carousel slide\" mbr-class=\"{'carousel-fade': fade}\" data-ride=\"{{autoplay ? 'carousel' : false}}\" data-interval=\"{{interval*1000}}\">\n                    <div class=\"mbr-overlay\" mbr-if=\"overlaySlide\" mbr-style=\"{'opacity': overlaySlideOpacity, 'background-color': overlaySlideColor}\">\n                    </div>\n                    <ol class=\"carousel-indicators\">\n                        <li data-target=\"#{{sliderId}}\" data-slide-to=\"0\" class=\"active\"></li>\n                        <li data-target=\"#{{sliderId}}\" data-slide-to=\"1\"></li>\n                        <li data-target=\"#{{sliderId}}\" data-slide-to=\"2\"></li><li data-target=\"#{{sliderId}}\" data-slide-to=\"3\"></li>\n                    </ol>\n                    <div class=\"carousel-inner\">\n                        <div class=\"carousel-item slider-image item active\">\n                            <div class=\"item-wrapper\">\n                                \n                                <div class=\"carousel-caption d-none d-md-block\" mbr-if=\"showCaption || showText\">\n                                    <h5 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-5\"><b>Education</b></h5>\n                                    <p class=\"mbr-section-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Nanjing University - Nanjing, MA</p>\n                                </div>\n                            <a href=\"index.html#timeline3-p\" target=\"false\"><img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/mbr-2-1900x1267.jpg\"></a></div>\n                        </div>\n                        <div class=\"carousel-item slider-image item\">\n                            <div class=\"item-wrapper\">\n                                \n                                <div class=\"carousel-caption d-none d-md-block\" mbr-if=\"showCaption || showText\">\n                                    <h5 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-5\"><b>Professional Experience</b></h5>\n                                    <p class=\"mbr-section-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Xinhua News Agency - Nanjing, Reporter</p>\n                                </div>\n                            <a href=\"index.html#timeline3-t\" target=\"false\"><img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/mbr-3-1900x1267.jpg\"></a></div>\n                        </div>\n                        <div class=\"carousel-item slider-image item\">\n                            <div class=\"item-wrapper\">\n                                \n                                <div class=\"carousel-caption d-none d-md-block\" mbr-if=\"showCaption || showText\">\n                                    <h5 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-5\"><b>Leadership Experience</b></h5>\n                                    <p class=\"mbr-section-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Volunteer Association</p>\n                                </div>\n                            <a href=\"index.html#team1-u\" target=\"false\"><img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/mbr-4-1900x1267.jpg\"></a></div>\n                        </div><div class=\"carousel-item slider-image item\">\n                            <div class=\"item-wrapper\">\n                                \n                                <div class=\"carousel-caption d-none d-md-block\" mbr-if=\"showCaption || showText\">\n                                    <h5 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-5\"><b>Skills &amp; Interests</b></h5>\n                                    <p class=\"mbr-section-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Social Media Platform Operation, English, Writing</p>\n                                </div>\n                            <a href=\"index.html#features11-x\" target=\"false\"><img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/mbr-5-1900x1267.jpg\" data-slide-to=\"3\"></a></div>\n                        </div>\n                    </div>\n                    <a class=\"carousel-control carousel-control-prev\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"prev\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-prev\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only\">Previous</span>\n                    </a>\n                    <a class=\"carousel-control carousel-control-next\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"next\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-next\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only\">Next</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbb1P5r6Em",
+          "_anchor": "slider2-s",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".timeline-element": {
+              "position": "relative"
+            },
+            ".timelines-container": {
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "& when (@reverseTimeline)": {
+                "flex-direction": "column-reverse"
+              }
+            },
+            ".image-wrapper img": {
+              "width": "100%",
+              "object-fit": "cover"
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .timeline-date": {
+              "text-align": "center"
+            },
+            ".iconBackground": {
+              "position": "absolute",
+              "width": "20px",
+              "height": "20px",
+              "border-radius": "50%",
+              "border": "2px solid @lineColor",
+              "margin-left": "-9px",
+              "@media (max-width: 767px)": {
+                "left": "15px",
+                "top": "30px"
+              },
+              "@media (min-width: 768px)": {
+                "top": "70px",
+                "left": "50%"
+              }
+            },
+            ".row": {
+              "&:after": {
+                "content": "\"\"",
+                "position": "absolute",
+                "background-color": "@lineColor",
+                "width": "2px",
+                "@media (max-width: 767px)": {
+                  "height": "calc(100% ~\"+\" 30px)",
+                  "top": "50px",
+                  "left": "15px"
+                },
+                "@media (min-width: 768px)": {
+                  "& when (@showDates)": {
+                    "height": "calc(100% ~\"-\" 20px)"
+                  },
+                  "& when not (@showDates)": {
+                    "height": "calc(100% ~\"+\" 28px)"
+                  },
+                  "top": "90px",
+                  "left": "50%"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper, .image-wrapper": {
+                "padding": "0rem",
+                "padding-left": "2rem"
+              },
+              ".mbr-timeline-date": {
+                "text-align": "center !important"
+              },
+              ".mbr-timeline-title": {
+                "text-align": "center",
+                "margin-top": "1rem"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper": {
+                "padding": "1rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper, .image-wrapper": {
+                "padding": "2rem"
+              }
+            }
+          },
+          "_name": "timeline3",
+          "_customHTML": "<section class=\"timeline3\" group=\"Timelines\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"checkbox\" title=\"Reverse Timeline\" name=\"reverseTimeline\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Dates\" name=\"showDates\" checked>\n        <input type=\"checkbox\" title=\"Images\" name=\"showImages\" checked>\n        <select title=\"Count\" name=\"timelinesAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n            <option value=\"9\">9</option>\n            <option value=\"10\">10</option>\n            <option value=\"11\">11</option>\n            <option value=\"12\">12</option>\n        </select>\n        <input type=\"color\" name=\"lineColor\" title=\"Color\" value=\"#353535\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1349x1920.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Education</b></h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Enter subtitle here\n            </h4>\n        </div>\n        <div class=\"timelines-container mt-4\">\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">September 2013</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <a href=\"http://www.hbhz.net/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/highschool-405x405.jpg\" alt=\"Mobirise\" title></a>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Heshui High School</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Hengshui, Hebei Province.<br>Student of liberal arts<br>College Entrance Examination Achievement:<br>score 656/750<br>ranking 107</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>1\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">September 2016</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <a href=\"https://www.nju.edu.cn/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/nju-650x596.jpg\" alt=\"Mobirise\" title></a>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Nanjing University</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Nanjing, Jiangsu Province.<br>Bachelor of TCSL(Teaching Chinese as Second Language) &amp; JC(Journalism and Communication) |&nbsp;GPA  3.8/4.0<br><br>Key Courses: Media Convergence, News reporting &amp; Editing, News Commentary; English interpretation, English audio-visual, English writing, modern and contemporary literature<br><br>Award:&nbsp;Outstanding Undergraduate of the class of 2020<br><br><br></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>2\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">September 2020</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <a href=\"https://www.nju.edu.cn/\" target=\"_blank\"><img src=\"@PROJECT_PATH@/assets/images/nju-650x596.jpg\" alt=\"Mobirise\" title></a>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Nanjing University</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Nanjing, Jiangsu Province.<br>MSJ(Master of Journalism) |&nbsp;Computational Communication<br><br>Key Courses:&nbsp;Big Data Mining and Analysis, Quantitative research method,&nbsp;Qualitative research methods,&nbsp;Frontiers of journalism theory,&nbsp;Frontiers of communication theory</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>3\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Use Mobirise website building software to create multiple sites for commercial and non-profit projects.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>4\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. You don't have to code to create your own site. Select one of available themes in the Mobirise sitebuilder.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>5\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. All sites you create with the Mobirise web builder are mobile-friendly natively. No special actions required.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>6\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Select the theme that suits you. Each theme in the Mobirise site builder contains a set of unique blocks.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>7\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Use Mobirise website building software to create multiple sites for commercial and non-profit projects.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>8\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. You don't have to code to create your own site. Select one of available themes in the Mobirise sitebuilder.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>9\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. All sites you create with the Mobirise web builder are mobile-friendly natively. No special actions required.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>10\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Select the theme that suits you. Each theme in the Mobirise site builder contains a set of unique blocks.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>11\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Use Mobirise website building software to create multiple sites for commercial and non-profit projects.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "saVhPKr2SN",
+          "_anchor": "timeline3-p",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".timeline-element": {
+              "position": "relative"
+            },
+            ".timelines-container": {
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "& when (@reverseTimeline)": {
+                "flex-direction": "column-reverse"
+              }
+            },
+            ".image-wrapper img": {
+              "width": "100%",
+              "object-fit": "cover"
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .timeline-date": {
+              "text-align": "center"
+            },
+            ".iconBackground": {
+              "position": "absolute",
+              "width": "20px",
+              "height": "20px",
+              "border-radius": "50%",
+              "border": "2px solid @lineColor",
+              "margin-left": "-9px",
+              "@media (max-width: 767px)": {
+                "left": "15px",
+                "top": "30px"
+              },
+              "@media (min-width: 768px)": {
+                "top": "70px",
+                "left": "50%"
+              }
+            },
+            ".row": {
+              "&:after": {
+                "content": "\"\"",
+                "position": "absolute",
+                "background-color": "@lineColor",
+                "width": "2px",
+                "@media (max-width: 767px)": {
+                  "height": "calc(100% ~\"+\" 30px)",
+                  "top": "50px",
+                  "left": "15px"
+                },
+                "@media (min-width: 768px)": {
+                  "& when (@showDates)": {
+                    "height": "calc(100% ~\"-\" 20px)"
+                  },
+                  "& when not (@showDates)": {
+                    "height": "calc(100% ~\"+\" 28px)"
+                  },
+                  "top": "90px",
+                  "left": "50%"
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper, .image-wrapper": {
+                "padding": "0rem",
+                "padding-left": "2rem"
+              },
+              ".mbr-timeline-date": {
+                "text-align": "center !important"
+              },
+              ".mbr-timeline-title": {
+                "text-align": "center",
+                "margin-top": "1rem"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper": {
+                "padding": "1rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".timeline-date-wrapper, .timeline-text-wrapper, .image-wrapper": {
+                "padding": "2rem"
+              }
+            }
+          },
+          "_name": "timeline3",
+          "_customHTML": "<section class=\"timeline3\" group=\"Timelines\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"checkbox\" title=\"Reverse Timeline\" name=\"reverseTimeline\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Dates\" name=\"showDates\" checked>\n        <input type=\"checkbox\" title=\"Images\" name=\"showImages\" checked>\n        <select title=\"Count\" name=\"timelinesAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected>6</option>\n            <option value=\"7\">7</option>\n            <option value=\"8\">8</option>\n            <option value=\"9\">9</option>\n            <option value=\"10\">10</option>\n            <option value=\"11\">11</option>\n            <option value=\"12\">12</option>\n        </select>\n        <input type=\"color\" name=\"lineColor\" title=\"Color\" value=\"#bbbbbb\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1280x1920.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#fafafa\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Professional Experience</b></h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Enter subtitle here\n            </h4>\n        </div>\n        <div class=\"timelines-container mt-4\">\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2018.9 -2011.9&nbsp;<br></p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mmexport1479951911063-948x948.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Nanboone New Media studio&nbsp;</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Director of Live Broadcasting Department<br>\n<br>0 Basic learning, quick mastery of live broadcast technology of large events, participation in planning and design<br></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>1\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2018.9 - 2018.11<br><br></p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-948x711.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Nanjing Forum 2018</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Operation Assistant\n<br>\n<br>Responsible for organizing conference materials, writing, translation and other supporting work<br>20+ Word documents and 10+ Excel forms</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>2\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2019.2 - 2019.4<br></p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/mmexport1557313141748-948x711.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>People's Daily</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Operation Assistant, New Media Center<br>\n<br>Responsible for the operation of the Chinese and English client platforms of The People's Daily<br></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>3\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2019.1 - 2020.6<br></p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-500x500.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Southern Metropolis Weekly</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Intern Reporter, Editing Department<br><br>Actively planning the topic selection, writing various kinds of articles according to the promotion needs, many first author<br>Reading volume 1.7w+<br><br></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>4\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2020.1 - 2020.5</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-20200228200605-948x1685.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Tencent</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">New Media Operation, Guyu Studio<br>Participate in the planning and operation of grain rain laboratory, Guyu plan and other columns; Docking WeChat, Weibo, etc.<br><br></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>5\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">2019.9 - 2019.12</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"@PROJECT_PATH@/assets/images/beauty-20191228225239-948x632.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\"><b>Xinhua News Agency&nbsp;</b></h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Intern Reporter,&nbsp;Jiangsu Branch&nbsp;<br>Participated in the daily topic selection and planning, interview and writing of the Audio and video Department, Published articles on the Chinese and English clients of Xinhua News Agency</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>6\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Select the theme that suits you. Each theme in the Mobirise site builder contains a set of unique blocks.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>7\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Use Mobirise website building software to create multiple sites for commercial and non-profit projects.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>8\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. You don't have to code to create your own site. Select one of available themes in the Mobirise sitebuilder.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>9\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. All sites you create with the Mobirise web builder are mobile-friendly natively. No special actions required.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>10\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Select the theme that suits you. Each theme in the Mobirise site builder contains a set of unique blocks.\n                        </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"row timeline-element first-separline mb-5\" mbr-class=\"{'reverseTimeline': reverseTimeline}\" mbr-if=\"timelinesAmount>11\">\n                <div class=\"timeline-date col-12\">\n                    <div class=\"timeline-date-wrapper\">\n                        <p class=\"mbr-timeline-date\" data-toolbar=\"-mbrAlign\" mbr-theme-style=\"display-7\" mbr-if=\"showDates\" data-app-selector=\".mbr-timeline-date\">\n                            23 April 2025</p>\n                    </div>\n                </div>\n                <span class=\"iconBackground\"></span>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"image-wrapper\" mbr-if=\"showImages\">\n                        <img src=\"../_images/features/features3.jpg\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n                <div class=\"col-12 col-md-6\">\n                    <div class=\"timeline-text-wrapper\">\n                        <h4 class=\"mbr-timeline-title mbr-fonts-style mb-0\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-timeline-title\">\n                            <b>Form Builder</b>\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style mt-3 mb-0\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                            This is a timeline block. Click on the blue gear icon to set the number of items in this timeline. Use Mobirise website building software to create multiple sites for commercial and non-profit projects.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbbi6UvdSb",
+          "_anchor": "timeline3-t",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".team-card": {
+              "margin-bottom": "2rem",
+              "transition": "all 0.3s",
+              "&:hover": {
+                "transform": "translateY(-10px)"
+              }
+            },
+            ".card-wrap": {
+              "background": "@cardBg",
+              "border-radius": "4px",
+              "@media (max-width: 991px)": {
+                "margin-bottom": "2rem"
+              },
+              ".image-wrap img": {
+                "width": "100%"
+              },
+              ".content-wrap": {
+                "@media (min-width: 768px)": {
+                  "padding": "2rem"
+                },
+                "@media (max-width: 767px)": {
+                  "padding": "1rem"
+                }
+              }
+            },
+            ".social-row": {
+              "text-align": "center",
+              ".soc-item": {
+                "display": "inline-block",
+                "text-align": "center",
+                "border-radius": "50%",
+                "margin-right": "0.6rem",
+                "margin-bottom": "1rem",
+                "padding": "0.5rem",
+                "border": "2px solid @socialIconColor",
+                "transition": "all 0.3s",
+                ".mbr-iconfont": {
+                  "transition": "all 0.3s",
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-content": "center",
+                  "color": "@socialIconColor",
+                  "font-size": "1.5rem"
+                },
+                "&:hover": {
+                  "background-color": "@socialIconColor",
+                  ".mbr-iconfont": {
+                    "color": "contrast(@socialIconColor)"
+                  }
+                }
+              }
+            }
+          },
+          "_name": "team1",
+          "_customHTML": "<section class=\"team1\" group=\"Team\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Name\" name=\"showName\" checked>\n        <input type=\"checkbox\" title=\"Role\" name=\"showRole\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showCardText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showCardButtons\">\n        <input type=\"color\" title=\"BG\" name=\"cardBg\" value=\"#ffffff\">\n        <header condition=\"showSocial\">Social</header>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\">\n        <input type=\"range\" name=\"socialCount\" title=\"Count\" min=\"1\" max=\"5\" step=\"1\" value=\"1\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Color\" name=\"socialIconColor\" value=\"#6592e6\" condition=\"showSocial\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1200.jpg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#fafafa\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#fafafa\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><b>Leadership Experience</b></h3>\n                <p class=\"mbr-section-subtitle mbr-fonts-style align-center mb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-subtitle\">\n                    Meet our team\n                </p>\n            </div>\n            <div class=\"col-sm-6\" mbr-class=\"{'col-lg-3': cardsAmount == 4, 'col-lg-4': cardsAmount != 4}\">\n                <div class=\"card-wrap\">\n                    <div class=\"image-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/idocs-506x295.jpg\" alt>\n                    </div>\n                    <div class=\"content-wrap\">\n                        <h5 class=\"mbr-section-title card-title mbr-fonts-style align-center m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showName\" data-app-selector=\".card-title, .social-row\"><b>2018.11</b>\n                        </h5>\n                        <h6 class=\"mbr-role mbr-fonts-style align-center mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".mbr-role, .social-row\"><b>Translator</b></h6>\n                        <p class=\"card-text mbr-fonts-style align-center\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">&nbsp;IDOCS International Documentary Forum&nbsp;<br></p>\n                        <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                            <div class=\"soc-item\">\n                                <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                </a>\n                            </div>\n                        </div>\n                        <div class=\"mbr-section-btn card-btn align-center\" mbr-buttons data-toolbar=\"-mbrBtnMove\" mbr-if=\"showCardButtons\" mbr-theme-style=\"display-4\">\n                            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">View\n                                Profile</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col-sm-6\" mbr-class=\"{'col-lg-3': cardsAmount == 4, 'col-lg-4': cardsAmount != 4}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrap\">\n                    <div class=\"image-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-20191022015202-506x380.jpg\" alt>\n                    </div>\n                    <div class=\"content-wrap\">\n                        <h5 class=\"mbr-section-title card-title mbr-fonts-style align-center m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showName\" data-app-selector=\".card-title, .social-row\"><b>2017.8</b></h5>\n                        <h6 class=\"mbr-role mbr-fonts-style align-center mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".mbr-role, .social-row\"><b>Overseas Volunteer&nbsp;</b></h6>\n                        <p class=\"card-text mbr-fonts-style align-center\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">&nbsp;\"Out of the World\" Bali Island | Pangli<br></p>\n                        <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                            <div class=\"soc-item\">\n                                <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                </a>\n                            </div>\n                        </div>\n                        <div class=\"mbr-section-btn card-btn align-center\" mbr-buttons data-toolbar=\"-mbrBtnMove\" mbr-if=\"showCardButtons\" mbr-theme-style=\"display-4\">\n                            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">View\n                                Profile</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col-sm-6\" mbr-class=\"{'col-lg-3': cardsAmount == 4, 'col-lg-4': cardsAmount != 4}\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrap\">\n                    <div class=\"image-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-20191022015212-506x338.jpg\" alt>\n                    </div>\n                    <div class=\"content-wrap\">\n                        <h5 class=\"mbr-section-title card-title mbr-fonts-style align-center m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showName\" data-app-selector=\".card-title, .social-row\">\n                            <b>2018.8</b></h5>\n                        <h6 class=\"mbr-role mbr-fonts-style align-center mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".mbr-role, .social-row\"><b>Outstanding Camper</b></h6>\n                        <p class=\"card-text mbr-fonts-style align-center\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">&nbsp;Taiwan Foguang Mountain International Youth Camp\n                        </p>\n                        <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                            <div class=\"soc-item\">\n                                <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                </a>\n                            </div>\n                        </div>\n                        <div class=\"mbr-section-btn card-btn align-center\" mbr-buttons data-toolbar=\"-mbrBtnMove\" mbr-if=\"showCardButtons\" mbr-theme-style=\"display-4\">\n                            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">View\n                                Profile</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col-sm-6\" mbr-class=\"{'col-lg-3': cardsAmount == 4, 'col-lg-4': cardsAmount != 4}\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrap\">\n                    <div class=\"image-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/-20191022015722-506x379.jpg\" alt>\n                    </div>\n                    <div class=\"content-wrap\">\n                        <h5 class=\"mbr-section-title card-title mbr-fonts-style align-center m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showName\" data-app-selector=\".card-title, .social-row\">\n                            <b>2017.9</b></h5>\n                        <h6 class=\"mbr-role mbr-fonts-style align-center mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showRole\" data-app-selector=\".mbr-role, .social-row\">\n                            <b>Leader</b></h6>\n                        <p class=\"card-text mbr-fonts-style align-center\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">Innovative project \"Xia Culture\" film in cross-cultural Teaching (national level)<br></p>\n                        <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                            <div class=\"soc-item\">\n                                <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                </a>\n                            </div>\n                            <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                </a>\n                            </div>\n                        </div>\n                        <div class=\"mbr-section-btn card-btn align-center\" mbr-buttons data-toolbar=\"-mbrBtnMove\" mbr-if=\"showCardButtons\" mbr-theme-style=\"display-4\">\n                            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">View\n                                Profile</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbbE8FfSyF",
+          "_anchor": "team1-u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card:not(:nth-last-child(1))": {
+              "margin-bottom": "2rem"
+            },
+            ".card-wrapper": {
+              "background-color": "@cardBg",
+              "border-radius": "4px",
+              "& when (@transparentCard)": {
+                "background-color": "transparent"
+              }
+            },
+            ".image-wrapper img": {
+              "width": "100%",
+              "object-fit": "cover"
+            },
+            ".social-row": {
+              ".soc-item": {
+                "display": "inline-block",
+                "text-align": "center",
+                "border-radius": "50%",
+                "margin-right": "0.6rem",
+                "margin-bottom": "1rem",
+                "padding": "0.5rem",
+                "border": "2px solid @socialIconColor",
+                "transition": "all 0.3s",
+                ".mbr-iconfont": {
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-content": "center",
+                  "color": "@socialIconColor",
+                  "font-size": "1.5rem",
+                  "transition": "all 0.3s"
+                },
+                "&:hover": {
+                  "background-color": "@socialIconColor",
+                  ".mbr-iconfont": {
+                    "color": "contrast(@socialIconColor)"
+                  }
+                }
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".card-box": {
+                "padding": "1rem"
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".card-box": {
+                "padding-right": "2rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".card-box": {
+                "padding-left": "2rem",
+                "padding-right": "4rem"
+              }
+            }
+          },
+          "_name": "team2",
+          "_customHTML": "<section class=\"team2\" group=\"Team\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" xmlns=\"http://www.w3.org/1999/html\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"imageWidth\" title=\"Image\" min=\"2\" max=\"6\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparentCard\">\n        <input type=\"color\" title=\"Color\" name=\"cardBg\" value=\"#ffffff\" condition=\"!transparentCard\">\n        <select title=\"Amount\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <header condition=\"showSocial\">Social</header>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\">\n        <input type=\"range\" name=\"socialCount\" title=\"Count\" min=\"1\" max=\"5\" step=\"1\" value=\"3\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Color\" name=\"socialIconColor\" value=\"#6592e6\" condition=\"showSocial\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1200.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#fafafa\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cebfaf\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div class=\"card\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/mbr-506x337.jpg\" alt=\"Mobirise\">\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <h5 class=\"card-title mbr-fonts-style m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\"><b>2018.1 - 2019.3</b></h5>\n                            <h6 class=\"card-subtitle mbr-fonts-style mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".card-subtitle\"><b>Nanjing University Media - \"Newtide\" Wechat Public Account&nbsp;</b></h6>\n                            <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Reporter &amp; Editor<br><br>Participated in topic selection meetings and field visits<br>Independently completed in-depth surveys, 1w+<br>Reported people features, in-depth investigation</p>\n                            <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                                <div class=\"soc-item\">\n                                    <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                    <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                    <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>1\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/mmexport1513526304232-695x463.jpg\" alt=\"Mobirise\">\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <h5 class=\"card-title mbr-fonts-style m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                                <b>2016.9 - 2018.9</b>\n                            </h5>\n                            <h6 class=\"card-subtitle mbr-fonts-style mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".card-subtitle\"><b>Second Drama Club of Nanjing University</b></h6>\n                            <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Vice President &amp; Producer<br><br>Completed 9 performances in 3 plays<br><br></p>\n                            <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                                <div class=\"soc-item\">\n                                    <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                    <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                    <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>2\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"../_images/people/team3.jpg\" alt=\"Mobirise\">\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <h5 class=\"card-title mbr-fonts-style m-0\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                                <b>Jessica Doe</b>\n                            </h5>\n                            <h6 class=\"card-subtitle mbr-fonts-style mb-3\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".card-subtitle\">\n                                <b>Analyst</b>\n                            </h6>\n                            <p class=\"mbr-text mbr-fonts-style\" data-app-selector=\".mbr-text, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                                Themes in the Mobirise website builder offer multiple blocks: intros, sliders,\n                                galleries, forms, articles, and so on. Start a project and click on the red plus buttons\n                                to see the blocks available for your theme.\n                            </p>\n                            <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                                <div class=\"soc-item\">\n                                    <a href=\"https://www.facebook.com/Mobirise/\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>1\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-twitter\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>2\">\n                                    <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>3\">\n                                    <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount>4\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbbH0ICREx",
+          "_anchor": "team2-v",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".top-line": {
+              "display": "flex",
+              "& when (@showTitleCard)": {
+                "justify-content": "space-between"
+              },
+              "& when not (@showTitleCard)": {
+                "justify-content": "flex-end",
+                "@media (max-width: 767px)": {
+                  "justify-content": "center"
+                }
+              }
+            },
+            ".mbr-section-title, .mbr-section-subtitle": {
+              "text-align": "center"
+            },
+            ".card:not(:nth-last-child(1))": {
+              "margin-bottom": "2rem"
+            },
+            ".card-wrapper": {
+              "border-radius": "4px",
+              "background-color": "@cardsBg",
+              "& when (@transparentCard)": {
+                "background-color": "transparent"
+              }
+            },
+            ".image-wrapper img": {
+              "width": "100%",
+              "object-fit": "cover"
+            },
+            "@media (max-width: 767px)": {
+              ".card-box": {
+                "padding": "1rem"
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".card-box": {
+                "padding-right": "2rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".card-box": {
+                "padding-left": "2rem",
+                "padding-right": "4rem"
+              }
+            }
+          },
+          "_name": "features11",
+          "_customHTML": "<section class=\"features10\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"imageWidth\" title=\"Image\" min=\"2\" max=\"6\" step=\"1\" value=\"3\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Cards</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitleCard\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparentCard\">\n        <input type=\"color\" title=\"Color\" name=\"cardsBg\" value=\"#fafafa\" condition=\"!transparentCard\">\n        <select title=\"Amount\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1-1920x1280.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#bed3f9\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid' : fullWidth}\">\n        <div class=\"title\">\n            <h3 mbr-if=\"showTitle\" class=\"mbr-section-title mbr-fonts-style mb-4\" mbr-theme-style=\"display-2\"><b>Skills &amp; Interests</b></h3>\n            <h4 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-theme-style=\"display-5\">\n                Subtitle\n            </h4>\n        </div>\n        <div class=\"card\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/img-20190906-141315-506x380.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>Languages</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">English: CET-6, IELTS 7.0<br>Mandarin: Level 1<br>Learning Japanese<br></p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>1\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/img-20191015-131124-506x380.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>Media</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Personal official account, we media operation, <br>Microsoft office, PS, PR, Programming with Python\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>2\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"@PROJECT_PATH@/assets/images/mmexport1572913597716-506x379.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>More Interets</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">World Traveler,<br>Sudoku, Writing, Drama, Documentary\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>3\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"../_images/products/product4.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>Glasses</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\">\n                                            $49</p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                                            Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme.\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>4\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"../_images/products/product5.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>Pineapple</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\">\n                                            $49\n                                        </p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                                            Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme.\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"card\" mbr-if=\"cardsAmount>5\">\n            <div class=\"card-wrapper\">\n                <div class=\"row align-items-center\">\n                    <div class=\"col-12 col-md-{{imageWidth}}\">\n                        <div class=\"image-wrapper\">\n                            <img src=\"../_images/products/product6.jpg\" alt=\"Mobirise\" title>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md\">\n                        <div class=\"card-box\">\n                            <div class=\"row\">\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"top-line\">\n                                        <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitleCard\" data-app-selector=\".card-title\"><b>Cat</b></h4>\n                                        <p class=\"cost mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".cost\">\n                                            $49</p>\n                                    </div>\n                                </div>\n                                <div class=\"col-12\" mbr-class=\"{'col-lg-10' : fullWidth}\">\n                                    <div class=\"bottom-line\">\n                                        <p class=\"mbr-text mbr-fonts-style m-0\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n                                            Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme.\n                                        </p>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbbJUysy8e",
+          "_anchor": "features11-x",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".image-wrapper": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".card-wrapper": {
+              "margin-bottom": "2rem",
+              "@media (max-width: 991px)": {
+                "padding": "1rem 2rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "2rem 4rem"
+              },
+              "display": "flex",
+              "border-radius": "4px",
+              "background": "@cardsBg"
+            },
+            ".mbr-iconfont": {
+              "font-size": "(@iconSize * 1rem)",
+              "padding-right": "1.5rem",
+              "color": "@primaryColor"
+            }
+          },
+          "_name": "contacts2",
+          "_customHTML": "<section class=\"contacts2\" group=\"Contacts\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Cards</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitleCards\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"range\" inline title=\"Icon Size\" name=\"iconSize\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"BG\" name=\"cardsBg\" value=\"#fafafa\">\n        <select title=\"Amount\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/2-720x540.jpg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cebfaf\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Contacts</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                Contacts Subtitle\n            </h4>\n        </div>\n        <div class=\"row justify-content-center mt-4\">\n            <div class=\"card col-12 col-md-6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-phone mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\" mbr-if=\"showTitleCards\">\n                            <b>Phone</b>\n                        </h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">(086) 15996302320&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-letter mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\" mbr-if=\"showTitleCards\">\n                            <b>Email</b>\n                        </h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\"><a href=\"mailto:yanyifan77@outlook.com\" class=\"text-primary\">yanyifan77@outlook.com&nbsp; &nbsp; &nbsp; </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 2\">\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-globe mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\" mbr-if=\"showTitleCards\">\n                            <b>Address</b>\n                        </h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Nanjing University,&nbsp;<br> 163 Xianlin Dadao, Nanjing, Jiangsu Province, China</p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 3\">\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-bulleted-list mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\" mbr-if=\"showTitleCards\"><b>Find me</b></h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            <a href=\"https://github.com/Francis-Yan\" class=\"text-primary\" target=\"_blank\">https://github.com/Francis-Yan</a><br>Wechat Public Account: 多一克（duoyike2017)</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sbbMCEXkQV",
+          "_anchor": "contacts2-y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center",
+              ".foot-menu": {
+                "list-style": "none",
+                "display": "flex",
+                "justify-content": "center",
+                "flex-wrap": "wrap",
+                "padding": "0",
+                "margin-bottom": "0",
+                "li": {
+                  "padding": "0 1rem 1rem 1rem",
+                  "p": {
+                    "margin": "0"
+                  }
+                }
+              },
+              ".social-list": {
+                "padding-left": "0",
+                "margin-bottom": "0",
+                "list-style": "none",
+                "display": "flex",
+                "flex-wrap": "wrap",
+                "justify-content": "flex-end",
+                ".mbr-iconfont-social": {
+                  "font-size": "1.5rem",
+                  "color": "#ffffff"
+                },
+                ".soc-item": {
+                  "margin": "0 .5rem"
+                },
+                "a": {
+                  "margin": "0",
+                  "opacity": ".5",
+                  "transition": ".2s linear",
+                  "&:hover": {
+                    "opacity": "1"
+                  }
+                },
+                "@media (max-width: 767px)": {
+                  "-webkit-justify-content": "center",
+                  "justify-content": "center"
+                }
+              },
+              ".row-copirayt": {
+                "word-break": "break-word",
+                "width": "100%",
+                "p": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "footer3",
+          "_customHTML": "<section class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"https://mobirise.com/help/\" class=\"text-success\">Help Center</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"http://forums.mobirise.com/\" class=\"text-success\">Mobirise Forums</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"https://mobirise.com/\" class=\"text-success\">Mobirise.com</a></li>\n                    \n                    \n                </ul>\n            </div>\n            <div class=\"row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right pb-2\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-youtube socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"mbr-iconfont mbr-iconfont-social socicon-instagram socicon\"></span>\n                        </a>\n                    </div>\n                    \n                    \n                </div>\n            </div>\n            <div class=\"row row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\">\n                    © Copyright 2020 Mobirise. All Rights Reserved.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s48P1Icc8J",
+          "_anchor": "footer3-i",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "title": "Page 1",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".social-row": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".media-container-row": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center",
+              ".foot-menu": {
+                "list-style": "none",
+                "display": "flex",
+                "justify-content": "center",
+                "flex-wrap": "wrap",
+                "padding": "0",
+                "margin-bottom": "0",
+                "li": {
+                  "padding": "0 1rem 1rem 1rem",
+                  "p": {
+                    "margin": "0"
+                  }
+                }
+              },
+              ".social-list": {
+                "padding-left": "0",
+                "margin-bottom": "0",
+                "list-style": "none",
+                "display": "flex",
+                "flex-wrap": "wrap",
+                "justify-content": "flex-end",
+                ".mbr-iconfont-social": {
+                  "font-size": "1.5rem",
+                  "color": "#ffffff"
+                },
+                ".soc-item": {
+                  "margin": "0 .5rem"
+                },
+                "a": {
+                  "margin": "0",
+                  "opacity": ".5",
+                  "transition": ".2s linear",
+                  "&:hover": {
+                    "opacity": "1"
+                  }
+                },
+                "@media (max-width: 767px)": {
+                  "-webkit-justify-content": "center",
+                  "justify-content": "center"
+                }
+              },
+              ".row-copirayt": {
+                "word-break": "break-word",
+                "width": "100%",
+                "p": {
+                  "width": "100%"
+                }
+              }
+            }
+          },
+          "_name": "footer3",
+          "_customHTML": "<section class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background8.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"row row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"https://mobirise.com/help/\" class=\"text-success\">Help Center</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"http://forums.mobirise.com/\" class=\"text-success\">Mobirise Forums</a></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\"foot-menu-item\"><a href=\"https://mobirise.com/\" class=\"text-success\">Mobirise.com</a></li>\n                    \n                    \n                </ul>\n            </div>\n            <div class=\"row social-row\" mbr-if=\"socialItems > 0\">\n                <div mbr-list mbr-list-grow=\"socialItems\" class=\"social-list align-right pb-2\">\n                    <div class=\"soc-item\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-youtube socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"mbr-iconfont mbr-iconfont-social socicon-instagram socicon\"></span>\n                        </a>\n                    </div>\n                    \n                    \n                </div>\n            </div>\n            <div class=\"row row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\">\n                    © Copyright 2020 Mobirise. All Rights Reserved.\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s48P1Icc8J",
+          "_anchor": "footer3-m",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
